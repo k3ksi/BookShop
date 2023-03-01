@@ -28,7 +28,7 @@ function loadPage() {
       "<br>" +
       novita[i].price +
       "$<br>" +
-      '<a onclick="addToCart()" class="buy">Buy</a><br>';
+      '<a onclick="addToCart()" class="buy">Compra</a><br>';
     bookcontainer.append(bookinfo);
   }
 }
@@ -55,7 +55,7 @@ function loadHorror() {
       "<br>" +
       horror[i].price +
       "$<br>" +
-      '<a onclick="addToCart()" class="buy">Buy</a><br>';
+      '<a onclick="addToCart()" class="buy">Compra</a><br>';
     bookcontainer.append(bookinfo);
   }
 }
@@ -82,7 +82,7 @@ function loadRomanzi() {
       "<br>" +
       romanzi[i].price +
       "$<br>" +
-      '<a onclick="addToCart()" class="buy">Buy</a><br>';
+      '<a onclick="addToCart()" class="buy">Compra</a><br>';
     bookcontainer.append(bookinfo);
   }
 }
@@ -109,7 +109,7 @@ function loadFantasy() {
       "<br>" +
       fantasy[i].price +
       "$<br>" +
-      '<a onclick="addToCart()" class="buy">Buy</a><br>';
+      '<a onclick="addToCart()" class="buy">Compra</a><br>';
     bookcontainer.append(bookinfo);
   }
 }
@@ -132,7 +132,7 @@ function loadAll() {
       "<br>" +
       novita[i].price +
       "$<br>" +
-      '<a onclick="addToCart()" class="buy">Buy</a><br>';
+      '<a onclick="addToCart()" class="buy">Compra</a><br>';
     bookcontainer.append(bookinfo);
   }
   let bookcontainer1 = document.createElement("div");
@@ -151,7 +151,7 @@ function loadAll() {
       "<br>" +
       horror[i].price +
       "$<br>" +
-      '<a onclick="addToCart()" class="buy">Buy</a><br>';
+      '<a onclick="addToCart()" class="buy">Compra</a><br>';
     bookcontainer1.append(bookinfo);
   }
   let bookcontainer2 = document.createElement("div");
@@ -170,7 +170,7 @@ function loadAll() {
       "<br>" +
       romanzi[i].price +
       "$<br>" +
-      '<a onclick="addToCart()" class="buy">Buy</a><br>';
+      '<a onclick="addToCart()" class="buy">Compra</a><br>';
     bookcontainer2.append(bookinfo);
   }
   let bookcontainer3 = document.createElement("div");
@@ -189,7 +189,7 @@ function loadAll() {
       "<br>" +
       fantasy[i].price +
       "$<br>" +
-      '<a class="buy" onclick="addToCart()">Buy</a><br>';
+      '<a class="buy" onclick="addToCart()">Compra</a><br>';
     bookcontainer3.append(bookinfo);
   }
 }

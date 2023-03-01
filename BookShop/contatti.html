@@ -9,7 +9,57 @@
       integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65"
       crossorigin="anonymous"
     />
-    <link href="contatti.css" rel="stylesheet" />
+    <link href="style.css" rel="stylesheet" />
   </head>
-  <body></body>
+  <body>
+    <div class="container">
+      <div class="row">
+        <div class="col-1" id="titlecontainer"><a href="index.html" id="home"></a></div>
+      <div class="col-10"><div id="title">BookShop</div></div>
+          <div class="col-1"><a href="index.html" id="carrello"></a></div>
+        </div>
+        <div class="row">
+          <div class="col-3">
+            <h3 class="sezioni">I nostri Social</h3>
+            <br />
+            <a class="sezioni">Facebook</a><br />
+            <a class="sezioni">Instagram</a><br />
+            <a class="sezioni">Linkedin</a><br />
+            <a class="sezioni">Tel. 333 1234567</a><br />
+          </div>
+          <div class="col-9">
+            <h3 class="sezioni" id="shoptitle">Contattaci</h3>
+            <div class="bookinfo" id="contattaci">
+              Nome:
+              <input type="text" placeholder="Inserisci il nome.." /><br />
+              Cognome:
+              <input type="text" placeholder="Inserisci il cognome.." /><br />
+              Email:
+              <input
+                type="email"
+                placeholder="Inserisci la tua email.."
+              /><br />
+              Messaggio:
+              <input type="text" placeholder="Inserisci il messaggio.." /><br />
+              <a class="buy" onclick="sendMessage()">Invia</a><br />
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-12" id="footer">
+            <a class="sezioni" href="javascript:history.go(-1)" id="contatti"
+              >Torna indietro</a
+            >
+          </div>
+        </div>
+      </div>
+    </div>
+    <script>
+      function sendMessage() {
+        alert(
+          "Se hai compilato i campi correttamente, verrai ricontattato a breve."
+        );
+      }
+    </script>
+  </body>
 </html>
