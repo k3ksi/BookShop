@@ -1,0 +1,263 @@
+<html>
+<body>
+     
+
+<div class = "shopping-cart">
+    <!--Titolo-->
+  <div class="title">
+    Shoping bag
+    <h1>
+
+    </h1>
+  </div>
+
+  <!--articolo1-->
+  <div class="item">
+    <div class="buttons">
+        <span class="delete-btn"></span>
+        
+    </div>
+
+    <div class="image">
+        <img src="art-1.png" alt="" />
+    </div>
+
+    <div class="description">
+        <span>name1</span>
+        <span>autor1</span>
+        <span>price1</span>
+    </div>
+
+    <div class="quantità">
+        <button class="plus-btn" type="button" name="button">
+        <img src="plus.svg" alt="" />
+        </button>
+        <input type="text" name="name" value="1">
+        <button class="minus-btn" type="button" name="button">
+        <img src="minus.svg" alt="" /> 
+        </button>
+    </div>
+
+    <div class="total-price">$20</div>
+  </div>
+
+
+<!--articolo2-->
+<div class="item">
+    <div class="buttons">
+        <span class="delete-btn"></span>
+        
+    </div>
+
+    <div class="image">
+        <img src="art-2.png" alt="" />
+    </div>
+
+    <div class="description">
+        <span>name2</span>
+        <span>autor2</span>
+        <span>price2</span>
+    </div>
+
+    <div class="quantità">
+        <button class="plus-btn" type="button" name="button">
+        <img src="plus.svg" alt="" />
+        </button>
+        <input type="text" name="name" value="1">
+        <button class="minus-btn" type="button" name="button">
+        <img src="minus.svg" alt="" /> 
+        </button>
+    </div>
+
+    <div class="total-price">$30</div>
+  </div>
+
+<!--articolo3-->
+<div class="item">
+    <div class="buttons">
+        <span class="delete-btn"></span>
+        
+    </div>
+
+    <div class="image">
+        <img src="art-3.png" alt="" />
+    </div>
+
+    <div class="description">
+        <span>name3</span>
+        <span>autor3</span>
+        <span>price3</span>
+    </div>
+
+    <div class="quantità">
+        <button class="plus-btn" type="button" name="button">
+        <img src="plus.svg" alt="" />
+        </button>
+        <input type="text" name="name" value="1">
+        <button class="minus-btn" type="button" name="button">
+        <img src="minus.svg" alt="" /> 
+        </button>
+    </div>
+
+    <div class="total-price">$10</div>
+  </div>
+
+  <div class="title">
+    Totale spesa
+
+</div>
+</body>
+
+
+<style>
+* {
+    box-sizing: border-box;
+}
+html,
+body {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    background-color: aliceblue;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.shoping-cart {
+    width: 750px;
+    height: 423px;
+    margin: 80px auto;
+    background: rgb(183, 38, 38);
+
+    border-radius: 6px;
+
+    display: flex;
+    flex-direction: column;
+}
+.title {
+    height: 60px;
+    border-bottom: 1px solid rgb(8, 8, 96);
+    padding:  20px 30px;
+    color: rgb(19, 18, 19);
+    font-size: 18 px;
+    font-weight: 400;
+}
+.art-1{
+    padding:  20px 30px;
+    height: 120px;
+    display: flex;
+}
+.art-1:nth-child(3) {
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
+}
+.buttons {
+    position: relative;
+    padding-top: 50px;
+    margin-right: 60px;    
+}
+.delete-btn {
+    width: 18px;
+    height: 17px;
+    background:url("delete-icn.svg") no-repeat center;
+}
+.image{
+    margin-right: 50px;
+}
+.description {
+    padding-top: 10px;
+    margin-right: 60px;
+    width: 115px;
+}
+.description span{
+    display: block;
+    font-size: 14px;
+    color: rgb(14, 14, 14);
+    font-weight: 400;
+}
+.description span:first-child {
+    margin-bottom: 5px;
+}
+.description span:last-child {
+    font-weight: 300;
+    margin-top: 8px;
+    color:rgb(235, 14, 14)
+}
+.quantità{
+    padding-top: 20px;
+    margin-right: 60px;
+}
+.quantità input{
+    -webkit-appearance: none;
+    border: none;
+    text-align: center;
+    width: 32px;
+    font-size: 16px;
+    color:black;
+    font-weight: 300;
+}
+button[class*=btn] {
+    width: 30px;
+    height: 30px;
+    background-color:rgb(31, 194, 205);
+    border-radius:6px;
+    border:none;
+    cursor: pointer;
+}
+.minus-btn img{
+    margin-bottom: 3px;
+}
+.plus-btn img {
+    margin-top: 2px;
+}
+button:focus,
+input:focus{
+    outline: 0;
+}
+
+.total-price { 
+width: 83px;
+padding-top: 27px;
+text-align: center;
+font-size: 16px;
+color:red;
+font-weight: 300;
+}
+
+.Totale spesa {
+    height: 60px;
+    border-bottom: 1px solid rgb(8, 8, 96);
+    padding:  20px 30px;
+    color: rgb(19, 18, 19);
+    font-size: 18 px;
+    font-weight: 400;
+}
+
+@media (max-width:800px){
+    .shoping-cart {
+        width: 100%;
+        height: auto;
+        overflow: hidden;
+    }
+    .art-1 {
+        height: auto;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .image img {
+        width: 50%;
+    }
+    .image,
+    .quantità,
+    .description {
+        width: 100%;
+        text-align: center;
+        margin: 6px 0;
+    }
+    .buttons {
+        margin-right: 20px;
+    }
+}
+</style>
+<body>
+    <script src="script.js"></script> 
+</body>
+</html>
