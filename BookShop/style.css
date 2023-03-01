@@ -16,7 +16,7 @@
   text-align: center;
 }
 .col-9 {
-  background-color: rgb(148, 135, 118);
+  background-color: rgb(60, 77, 91);
   height: 110vh;
   overflow: auto;
   border-radius: 1%;
@@ -62,6 +62,7 @@ h3 {
 }
 a:hover {
   color: rgb(185, 176, 176);
+  cursor: pointer;
 }
 #contatti {
   font-size: 18px;
