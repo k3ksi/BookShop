@@ -9,11 +9,36 @@
       integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65"
       crossorigin="anonymous"
     />
+    <link href="style.css" rel="stylesheet" />
+    <script src="index.js" defer></script>
   </head>
-  <body>
+  <body onload="loadPage()">
     <div class="container">
       <div class="row">
-        <div class="col-1"></div>
+        <div class="col-12" id="titlecontainer">
+          <a href="index.html" id="home"></a>
+          <div id="title">BookShop</div>
+          <a id="carrello" href=""></a>
+        </div>
+        <div class="row">
+          <div class="col-3">
+            <h3 class="sezioni">Sezioni</h3>
+            <br />
+            <a class="sezioni" onclick="loadHorror()">Horror</a><br />
+            <a class="sezioni" onclick="loadRomanzi()">Romanzi</a><br />
+            <a class="sezioni" onclick="loadFantasy()">Fantasy</a><br />
+            <a class="sezioni" onclick="loadAll()">Tutti</a><br />
+          </div>
+          <div class="col-9">
+            <h3 class="sezioni" id="shoptitle">Novità di oggi</h3>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-12" id="footer">
+            <a class="sezioni" href="contatti.html" id="contatti">Contatti</a>
+          </div>
+        </div>
       </div>
+    </div>
   </body>
 </html>
