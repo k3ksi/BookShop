@@ -14,48 +14,63 @@
   <body>
     <div class="container">
       <div class="row">
-        <div class="col-1" id="titlecontainer"><a href="index.html" id="home"></a></div>
-      <div class="col-10"><div id="title"><b>BookShop</b></div></div>
-          <div class="col-1"><a onclick="checkCart()" id="carrello"></a></div>
+        <div class="col-1" id="titlecontainer">
+          <a href="index.html" id="home"></a>
         </div>
-        <div class="row">
-          <div class="col-3">
-            <h3 class="sezioni">I nostri Social</h3>
-            <br />
-            <a class="sezioni">Facebook</a><br />
-            <a class="sezioni">Instagram</a><br />
-            <a class="sezioni">Linkedin</a><br />
-            <a class="sezioni">Tel. 333 1234567</a><br />
-          </div>
-          <div class="col-9">
-            <h3 class="sezioni" id="shoptitle">Contattaci</h3>
-            <div class="bookinfo" id="contattaci">
-              <form id="form">
-                <br>Nome:<br>
-                <input type="text" placeholder="Inserisci il nome.." required/><br />
-                Cognome:<br>
-                <input type="text" placeholder="Inserisci il cognome.." required/><br />
-                Email:<br>
-                <input
-                  type="email"
-                  placeholder="Inserisci la tua email.." required
-                /><br />
-                Messaggio:<br>
-                <input type="text" placeholder="Inserisci il messaggio.." required/><br /><br>
-                <input class="buy" type="submit" id="submit" onsubmit="sendMessage()">
-              </form>
-             
-            </div>
-          </div>
+        <div class="col-10">
+          <div id="title"><b>BookShop</b></div>
         </div>
-        <div class="row">
-          <div class="col-12" id="footer">
-            <a class="sezioni" href="javascript:history.go(-1)" id="contatti"
-              >Torna indietro</a
-            >
+        <div class="col-1"><a onclick="emptyCart()" id="trash"></a></div>
+      </div>
+      <div class="row">
+        <div class="col-3">
+          <h3 class="sezioni">I nostri Social</h3>
+          <br />
+          <a class="sezioni">Facebook</a><br />
+          <a class="sezioni">Instagram</a><br />
+          <a class="sezioni">Linkedin</a><br />
+          <a class="sezioni">Tel. 333 1234567</a><br />
+        </div>
+        <div class="col-9">
+          <h3 class="sezioni" id="shoptitle">Contattaci</h3>
+          <div class="bookinfo" id="contattaci">
+            <form id="form">
+              <br />Nome:<br />
+              <input type="text" placeholder="Scrivi qui.." required /><br />
+              Cognome:<br />
+              <input type="text" placeholder="Scrivi qui.." required /><br />
+              Email:<br />
+              <input type="email" placeholder="Scrivi qui.." required /><br />
+              Messaggio:<br />
+              <input
+                type="text"
+                placeholder="Scrivi qui.."
+                required
+              /><br /><br />
+              <input
+                class="buy"
+                type="submit"
+                id="submit"
+                onsubmit="sendMessage()"
+              />
+            </form>
           </div>
         </div>
       </div>
+      <div class="row">
+        <div class="col-12" id="footer">
+          <a class="sezioni" href="javascript:history.go(-1)" id="contatti">
+            Torna indietro
+          </a>
+        </div>
+      </div>
     </div>
+    <script>
+      function emptyCart() {
+        alert(
+          "Attenzione. Visitando questa pagina il tuo carrello si è svuotato."
+        );
+      }
+    </script>
   </body>
 </html>

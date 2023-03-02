@@ -253,3 +253,12 @@ function checkCart() {
     );
   }
 }
+function emptyCart() {
+  if (totale != 0) {
+    totale = 0;
+    cart = [];
+    alert("Hai svuotato il carrello");
+  } else {
+    alert("Non devi svuotare proprio nulla.");
+  }
+}
