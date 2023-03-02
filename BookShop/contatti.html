@@ -30,18 +30,21 @@
           <div class="col-9">
             <h3 class="sezioni" id="shoptitle">Contattaci</h3>
             <div class="bookinfo" id="contattaci">
-              Nome:
-              <input type="text" placeholder="Inserisci il nome.." /><br />
-              Cognome:
-              <input type="text" placeholder="Inserisci il cognome.." /><br />
-              Email:
-              <input
-                type="email"
-                placeholder="Inserisci la tua email.."
-              /><br />
-              Messaggio:
-              <input type="text" placeholder="Inserisci il messaggio.." /><br />
-              <a class="buy" onclick="sendMessage()">Invia</a><br />
+              <form id="form">
+                <br>Nome:
+                <input type="text" placeholder="Inserisci il nome.." required/><br />
+                Cognome:
+                <input type="text" placeholder="Inserisci il cognome.." required/><br />
+                Email:
+                <input
+                  type="email"
+                  placeholder="Inserisci la tua email.." required
+                /><br />
+                Messaggio:
+                <input type="text" placeholder="Inserisci il messaggio.." required/><br /><br>
+                <input class="buy" type="submit" onsubmit="sendMessage()">
+              </form>
+             
             </div>
           </div>
         </div>
@@ -54,12 +57,5 @@
         </div>
       </div>
     </div>
-    <script>
-      function sendMessage() {
-        alert(
-          "Se hai compilato i campi correttamente, verrai ricontattato a breve."
-        );
-      }
-    </script>
   </body>
 </html>

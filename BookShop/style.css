@@ -9,7 +9,7 @@
 .col-10,
 .col-12 {
   background-image: url("footer.png");
-  height: 30px;
+  height: 50px;
   border-radius: 1%;
   background-size: cover;
   border: 0;
@@ -17,7 +17,7 @@
 }
 .col-9 {
   background-color: rgb(60, 77, 91);
-  height: 110vh;
+  height: 120vh;
   overflow: auto;
   border-radius: 1%;
   padding: 0px;
@@ -25,6 +25,7 @@
 #title {
   display: inline;
   color: white;
+  font-size: 35px;
 }
 #titlecontainer {
   text-align: center;
@@ -35,7 +36,7 @@
   width: 25px;
   float: right;
   background-size: cover;
-  margin-top: 3px;
+  margin-top: 13px;
 }
 #home {
   float: left;
@@ -43,7 +44,7 @@
   height: 20px;
   width: 20px;
   background-size: cover;
-  margin-top: 3px;
+  margin-top: 15px;
 }
 .col-3 {
   background-image: url("menu.jpg");
@@ -83,7 +84,7 @@ a {
   border: 2px solid rgba(0, 0, 0, 0.5);
   border-radius: 3%;
   margin: 4px;
-  font-size: 10px;
+  font-size: 16px;
 }
 .bookcontainer {
   display: flex;
