@@ -53,11 +53,11 @@ input {
 }
 #trash {
   background-image: url("trash.png");
-  height: 25px;
-  width: 25px;
+  height: 20px;
+  width: 20px;
   float: right;
   background-size: cover;
-  margin-top: 13px;
+  margin-top: 15px;
   margin-right: 15px;
 }
 #home {
@@ -67,6 +67,7 @@ input {
   width: 20px;
   background-size: cover;
   margin-top: 15px;
+  margin-left: 10px;
 }
 .col-3 {
   background-image: url("menu.jpg");
