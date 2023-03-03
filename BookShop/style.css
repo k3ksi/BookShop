@@ -191,6 +191,7 @@ table {
   border: 1px solid white;
   color: white;
   margin-top: 20px;
+  background-color: rgba(0, 0, 0, 0.5);
 }
 th,
 td {
