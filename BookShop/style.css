@@ -1,9 +1,9 @@
 [class^="col-"] {
-  border: 2px solid white;
 }
 body {
   font-family: "Quicksand", sans-serif;
   font-weight: 300;
+  background-color: rgba(0, 0, 0, 0.5);
 }
 #form,
 #submit {
@@ -22,16 +22,14 @@ input {
 .col-12 {
   background-image: url("footer.png");
   height: 50px;
-  border-radius: 1%;
   background-size: cover;
   border: 0;
   text-align: center;
 }
 .col-9 {
-  background-color: rgb(60, 77, 91);
+  background-color: rgb(66, 72, 77);
   height: 120vh;
   overflow: auto;
-  border-radius: 1%;
   padding: 0px;
 }
 #title,
@@ -71,7 +69,6 @@ input {
 .col-3 {
   background-image: url("menu.jpg");
   height: auto;
-  border-radius: 1.5%;
   background-size: cover;
 }
 .sezioni {
