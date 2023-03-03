@@ -9,6 +9,8 @@ const book2 = new book("Divina Commedia", "Dante", 22, "book2.jpeg");
 const book3 = new book("The Little Dog", "Various", 10, "book3.jpeg");
 const novita = [book1, book2, book3];
 function loadPage() {
+  let principale = document.getElementById("principale");
+  principale.style.height = "120vh";
   let shoptitle = document.getElementById("shoptitle");
   shoptitle.innerHTML = "Novità di oggi";
   let bookcontainer = document.createElement("div");
@@ -32,7 +34,9 @@ function loadPage() {
       novita[i].title.split(" ").join("") +
       '",' +
       novita[i].price +
-      ') class="buy">Compra</a><br>';
+      ',"' +
+      novita[i].cover +
+      '") class="buy">Compra</a><br>';
     bookcontainer.append(bookinfo);
   }
 }
@@ -41,6 +45,8 @@ const book5 = new book("Room 312", "hawkes", 16, "book5.jpeg");
 const book6 = new book("House of secrets", "Ramsey", 9, "book6.jpeg");
 const horror = [book4, book5, book6];
 function loadHorror() {
+  let principale = document.getElementById("principale");
+  principale.style.height = "120vh";
   let shoptitle = document.getElementById("shoptitle");
   shoptitle.innerHTML = "Horror";
   let bookcontainer = document.createElement("div");
@@ -63,7 +69,9 @@ function loadHorror() {
       horror[i].title.split(" ").join("") +
       '",' +
       horror[i].price +
-      ') class="buy">Compra</a><br>';
+      ',"' +
+      horror[i].cover +
+      '") class="buy">Compra</a><br>';
     bookcontainer.append(bookinfo);
   }
 }
@@ -72,6 +80,8 @@ const book8 = new book("Love more than ever", "Morales", 14, "book8.jpeg");
 const book9 = new book("Love of My Life", "Maxwell", 29, "book9.jpeg");
 const romanzi = [book7, book8, book9];
 function loadRomanzi() {
+  let principale = document.getElementById("principale");
+  principale.style.height = "120vh";
   let shoptitle = document.getElementById("shoptitle");
   shoptitle.innerHTML = "Romanzi";
   let bookcontainer = document.createElement("div");
@@ -94,7 +104,9 @@ function loadRomanzi() {
       romanzi[i].title.split(" ").join("") +
       '",' +
       romanzi[i].price +
-      ') class="buy">Compra</a><br>';
+      ',"' +
+      romanzi[i].cover +
+      '") class="buy">Compra</a><br>';
     bookcontainer.append(bookinfo);
   }
 }
@@ -103,6 +115,8 @@ const book11 = new book("Metropolis", "Mendoza", 4, "book11.jpeg");
 const book12 = new book("The Tempest", "Holland", 19, "book12.jpeg");
 const fantasy = [book10, book11, book12];
 function loadFantasy() {
+  let principale = document.getElementById("principale");
+  principale.style.height = "120vh";
   let shoptitle = document.getElementById("shoptitle");
   shoptitle.innerHTML = "Fantasy";
   let bookcontainer = document.createElement("div");
@@ -125,11 +139,15 @@ function loadFantasy() {
       fantasy[i].title.split(" ").join("") +
       '",' +
       fantasy[i].price +
-      ') class="buy">Compra</a><br>';
+      ',"' +
+      fantasy[i].cover +
+      '") class="buy">Compra</a><br>';
     bookcontainer.append(bookinfo);
   }
 }
 function loadAll() {
+  let principale = document.getElementById("principale");
+  principale.style.height = "120vh";
   let shoptitle = document.getElementById("shoptitle");
   shoptitle.innerHTML = "Tutti";
   let bookcontainer = document.createElement("div");
@@ -152,7 +170,9 @@ function loadAll() {
       novita[i].title.split(" ").join("") +
       '",' +
       novita[i].price +
-      ') class="buy">Compra</a><br>';
+      ',"' +
+      novita[i].cover +
+      '") class="buy">Compra</a><br>';
     bookcontainer.append(bookinfo);
   }
   let bookcontainer1 = document.createElement("div");
@@ -175,7 +195,9 @@ function loadAll() {
       horror[i].title.split(" ").join("") +
       '",' +
       horror[i].price +
-      ') class="buy">Compra</a><br>';
+      ',"' +
+      horror[i].cover +
+      '") class="buy">Compra</a><br>';
     bookcontainer1.append(bookinfo);
   }
   let bookcontainer2 = document.createElement("div");
@@ -198,7 +220,9 @@ function loadAll() {
       romanzi[i].title.split(" ").join("") +
       '",' +
       romanzi[i].price +
-      ') class="buy">Compra</a><br>';
+      ',"' +
+      romanzi[i].cover +
+      '") class="buy">Compra</a><br>';
     bookcontainer2.append(bookinfo);
   }
   let bookcontainer3 = document.createElement("div");
@@ -221,44 +245,66 @@ function loadAll() {
       fantasy[i].title.split(" ").join("") +
       '",' +
       fantasy[i].price +
-      ') class="buy">Compra</a><br>';
+      ',"' +
+      fantasy[i].cover +
+      '") class="buy">Compra</a><br>';
     bookcontainer3.append(bookinfo);
   }
 }
 var cart = [];
 var totale = 0;
-function addToCart(libro, prezzo) {
-  if (cart.includes(libro)) {
-    alert("Non puoi aggiungere nuovamente questo libro");
-  } else {
-    cart.push(libro);
-    totale += prezzo;
-    alert("Aggiunto al carrello");
-  }
+function addToCart(libro, prezzo, immagine) {
+  let b = new book(libro, "", prezzo, immagine);
+  cart.push(b);
+  totale += prezzo;
+  alert("Aggiunto al carrello");
 }
 function checkCart() {
+  let principale = document.getElementById("principale");
+  principale.style.height = "auto";
   if (cart.length == 0) {
+    principale.style.height = "120vh";
     alert("Non hai aggiunto libri al carrello!");
   } else {
-    let libriComprati = "";
+    let shoptitle = document.getElementById("shoptitle");
+    shoptitle.innerHTML = "Carrello";
+    let tablecontainer = document.createElement("div");
+    tablecontainer.setAttribute("class", "bookContainer");
+    shoptitle.append(tablecontainer);
+    let table = document.createElement("table");
+    let tr = document.createElement("tr");
+    tr.innerHTML =
+      "<th>Immagine</th><th>Titolo</th><th>Prezzo</th><th>Rimuovi</th>";
+    table.append(tr);
     for (let i = 0; i < cart.length; i++) {
-      libriComprati += cart[i] + ",";
+      let tr2 = document.createElement("tr");
+      tr2.innerHTML =
+        '<td><img src="' +
+        cart[i].cover +
+        '" width="50" height="80" /></td><td>' +
+        cart[i].title +
+        "</td><td>" +
+        cart[i].price +
+        '$</td><td><a onclick=emptyCart("' +
+        cart[i].title +
+        '") id="trash"></a></td>';
+      table.append(tr2);
     }
-    alert(
-      "Libri acquistati : " +
-        libriComprati.slice(0, -1) +
-        "\nTotale da pagare: " +
-        totale +
-        "$"
-    );
+    let tr1 = document.createElement("tr");
+    tr1.innerHTML = '<td colspan="4">Totale :' + totale + "$</td>";
+    table.append(tr1);
+
+    tablecontainer.append(table);
   }
 }
-function emptyCart() {
-  if (totale != 0) {
-    totale = 0;
-    cart = [];
+function emptyCart(titolo) {
+  if (cart.length == 1) {
     alert("Hai svuotato il carrello");
+    location.reload();
   } else {
-    alert("Non devi svuotare proprio nulla.");
+    let index = cart.findIndex((book) => book.title === titolo);
+    totale -= cart[index].price;
+    cart.splice(index, 1);
+    checkCart();
   }
 }
